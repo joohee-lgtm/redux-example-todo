@@ -1,4 +1,30 @@
 {
   // Naver https://github.com/naver/eslint-config-naver/blob/master/STYLE_GUIDE.md
-  "extends": "naver"
+  "extends": [
+    "naver", "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true,
+      "modules": true
+    }
+  },
+  "rules" :{
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "never",
+      "imports": "never",
+      "exports": "never",
+      "functions": "ignore"
+    }]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React"
+    }
+  },
+  "plugins": [
+    "react"
+  ]
 }

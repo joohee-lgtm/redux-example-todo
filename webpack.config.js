@@ -14,18 +14,18 @@ const config = {
 	},
 	module: {
 		rules: [{
-			enforce: "pre",
-			test: /\.js$/,
-			include: path.join(__dirname, "src"),
-			exclude: /node_modules/,
-			loader: "eslint-loader",
+			//enforce: "pre",
+			//test: /\.js$/,
+			//include: path.join(__dirname, "src"),
+			//exclude: /node_modules/,
+			//loader: "eslint-loader",
 		}, {
 			test: [/(\.js)$/, /(\.jsx)$/],
 			exclude: /(node_modules)/,
 			include: path.join(__dirname, "src"),
 			loader: "babel-loader",
 			query: {
-				presets: ['es2015', 'react']
+				presets: ["react", "es2015", "stage-0"],
 			},
 		}, {
 			test: /\.css$/,

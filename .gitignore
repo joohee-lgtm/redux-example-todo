@@ -1,0 +1,15 @@
+# npm modules
+components
+build
+.sass-cache
+npm-debug.log
+npm-debug.log*
+
+# coverage report
+coverage/
+.DS_Store
+#dist/
+doc/
+node_modules
+.idea/
+*.log

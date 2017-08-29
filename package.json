@@ -17,6 +17,7 @@
   "author": "kjhwee91",
   "license": "MIT",
   "dependencies": {
+    "@sau/toggler": "^0.1.22",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },

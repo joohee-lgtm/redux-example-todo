@@ -1,16 +1,10 @@
-import React from "react";
-import {render} from "react-dom";
-import {Provider} from "react-redux";
-import {createStore} from "redux";
-import todoApp from "./reducers";
-import App from "./components/App.jsx";
+import installTodo from "./todo";
+import installSimpleCounter  from "./simple-counter";
+import installCounter from "./counter";
 
-const store = createStore(todoApp);
+const root = document.getElementById("root");
 
-render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById("root")
-);
+installTodo(root);
+//installSimpleCounter(root);
+//installCounter(root);
 

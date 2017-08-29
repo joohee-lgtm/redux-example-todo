@@ -5,6 +5,8 @@ import TodoList from "../components/TodoList";
 const getVisibleTodos = (todos, filter) => {
 	let value;
 
+	console.log(filter);
+
 	switch (filter) {
 		case "SHOW_ALL" :
 			value = todos;
@@ -21,9 +23,13 @@ const getVisibleTodos = (todos, filter) => {
 	return value;
 };
 
-const mapStateToProps = state => ({
-	todos: getVisibleTodos(state.todos, state.visibilityFilter)
-});
+const mapStateToProps = state => {
+	console.log("mapStateToProps " +  state.visibilityFilter);
+
+	return {
+		todos: getVisibleTodos(state.todos, state.visibilityFilter)
+	};
+};
 
 const mapDispatchToProps = dispatch => ({
 	onTodoClick: id => {
